@@ -4,4 +4,4 @@ gem "sinatra"
 gem "pry-byebug"
 gem "slim"
 gem "sinatra-partial"
-
+gem "puma"
