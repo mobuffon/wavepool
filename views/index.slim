@@ -3,39 +3,66 @@ div.poolbanner
   h1.text-center.mb-5 Die Besten Wavepools und stehende Wellen  in Deutschland
 div.section-title.container.mt-5.mb-5
   p.text-center.w-75.mx-auto Surfen, ein Fluch und Segen zugleich! Vor allem wenn man deutscher ist. Ganz egal ob du Profi oder Anfänger bist - wir alle suchen oft nach einer Möglichkeit, das Verlangen zu befriedigen, einen guten Turn zufahren, nachdem man Mason Ho mal wieder on the search auf Instagram gesehen hat. Surfpools werden immer populärer in Deutschland und können uns eine Alternative zum Ostseegeschwabbel bieten.
-div.container.section-map
+div.container.section-map.mb-5
   div#map
-  javascript:
-    var standingMarker = L.icon({
-      iconUrl: 'images/marker-2.png',
-      iconSize: [35, 35],
-      iconAnchor: [0, 0],
-      popupAnchor: [0, 0]
-    });
-    var poolMarker = L.icon({
-      iconUrl: 'images/marker-1.png',
-      iconSize: [35, 35],
-      iconAnchor: [0, 0],
-      popupAnchor: [0, 0]
-    });
-    var map = L.map('map').setView([51.505, 10], 6.3);
-    var langenfeld = L.marker([51.11402448480671, 6.913285324888693], {icon: standingMarker}).addTo(map);
-    var wellenwerk = L.marker([52.53275434999398, 13.493748591627542], {icon: standingMarker}).addTo(map);
-    var eisbachwelle = L.marker([48.14360684113524, 11.587724233796637], {icon: standingMarker}).addTo(map);
-    var hasewelle = L.marker([52.27518397894788, 8.047007405109662], {icon: standingMarker}).addTo(map);
-    var stade = L.marker([53.546642956700886, 9.495002469841205], {icon: poolMarker}).addTo(map);
-    langenfeld.bindPopup("<a href='https://www.surf-langenfeld.de/'><b>Surf Langenfeld</b></a><br>Alle Könner-Level<br>min. 12 Jahre");
-    wellenwerk.bindPopup("<a href='https://wellenwerk-berlin.de/'><b>Wellenwerk Berlin</b></a><br>Alle Könner-Level<br>min. 12 Jahre");
-    eisbachwelle.bindPopup("<b>Eisbachwelle</b><br>Unbeaufsichtigt<br>Guter vibe aber macht <br>euch mit den Regeln vertraut");
-    hasewelle.bindPopup("<a href='https://hasewelle.de/'><b>Hasewelle Osnabrück</b></a><br>Alle Könner-Level<br>min. 12 Jahre<br>Im Einkaufzentrum");
-    stade.bindPopup("<a href='https://surfgarten.de/'><b>Surf Garten Stade</b></a><br>In der Bauphase<br>Eröffnung 2024<br>Alle Könner-Level<br>min. 12 Jahre");
+  script src="javascript/surfpoolsmap.js" type="text/javascript"
+div.container.section-spotinfo
+  div.row.row-cols-1.row-cols-md-3.g-4
+    div.col
+      div class="card"
+        img src="images/surfpool-wavepool-hasewelle.jpg" class="card-img-top" alt="..."
+        div class="card-body"
+          a href="http://www.hasewelle.de" target="_blank" rel="noopener noreferrer"
+            h5 class="card-title" HASEWELLE Osnabrück
+          p class="card-text" Die Hasewelle von L&T in Osnabrück ist der perfekte Spot für Indoor Surfen auf der stehenden Welle. In unserer Wellenanlage kannst Du wetterunabhängig nach Deinem eigenen Können auf der perfekten Welle surfen.
+        ul class="list-group list-group-flush"
+          li class="list-group-item"
+            | Mo - Sa: 09:30 - 19:00 Uhr
+          li class="list-group-item" Kinder 8 bis 14 29,00€ | Erwachsen 34,00€
+          li class="list-group-item" Gruppentickets verfügbar
 
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibW9idWZmb24iLCJhIjoiY2wxaHNlMHpyMDd6czNicWxhbjU0aTdmNSJ9.ZIyWlmQfy5anJJoRyhSizQ', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 18,
-      id: 'mapbox/streets-v11',
-      tileSize: 512,
-      zoomOffset: -1,
-      accessToken: 'your.mapbox.access.token'
-    }).addTo(map);
+        div class="card-body"
+          a href="https://www.l-t.de/hasewelle-tickets-kaufen" target="_blank" rel="noopener noreferrer" class="card-link" Tickets
 
+    div.col
+      div class="card"
+        img src="images/surfpool-wavepool-langenfeld.jpg" class="card-img-top" alt="..."
+        div class="card-body"
+          a href="https://www.surf-langenfeld.de/" target="_blank" rel="noopener noreferrer"
+            h5 class="card-title" SURF - Langenfeld
+          p class="card-text" Die weltweit erste stehende Welle auf einem See bietet Dir ein echtes Naturerlebnis – mitten in NRW, zu jeder Zeit! Unter freiem Himmel surfst kann man auch hier den Surfpool das ganze Jahr geniesen. Immer einen Besuch wert!
+        ul class="list-group list-group-flush"
+          li class="list-group-item" Täglich siehe Timetable
+          li class="list-group-item" Surfkurs 75,00€ | 1h Sessions 40,00€
+
+        div class="card-body"
+          a href="https://www.surf-langenfeld.de/preise-kurse/" target="_blank" rel="noopener noreferrer" class="card-link" Tickets
+          a href="https://www.surf-langenfeld.de/timetable/" target="_blank" rel="noopener noreferrer" class="card-link" Timetable
+    div.col
+      div class="card"
+        img src="images/surfpool.jpg" class="card-img-top" alt="..."
+        div class="card-body"
+          h5 class="card-title" Card title
+          p class="card-text" Some quick example text to build on the card title and make up the bulk of the card's content.
+        ul class="list-group list-group-flush"
+          li class="list-group-item" An item
+          li class="list-group-item" A second item
+          li class="list-group-item" A third item
+
+        div class="card-body"
+          a href="#" class="card-link">Card link
+          a href="#" class="card-link">Another link
+    div.col
+      div class="card"
+        img src="images/surfpool.jpg" class="card-img-top" alt="..."
+        div class="card-body"
+          h5 class="card-title" Card title
+          p class="card-text" Some quick example text to build on the card title and make up the bulk of the card's content.
+        ul class="list-group list-group-flush"
+          li class="list-group-item" An item
+          li class="list-group-item" A second item
+          li class="list-group-item" A third item
+
+        div class="card-body"
+          a href="#" class="card-link">Card link
+          a href="#" class="card-link">Another link
